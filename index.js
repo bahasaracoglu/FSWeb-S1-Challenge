@@ -197,7 +197,7 @@ for (let i=0; i<kopyalananDizi.length; i++) {
 return kopyalananDizi
 }
 
-console.log(profilListesi(fenomenler));
+console.log("Görev-4__", profilListesi(fenomenler));
 
 /* Görev 5:
 Aşağıdakileri yapmak için fenomenSil'i kullanın:
@@ -215,7 +215,7 @@ function fenomenSil(fenomenSilinecekDizi, silinecekIndex) {
 return kopyaDizi
 }
 
-console.log(fenomenSil(fenomenler, 0));
+console.log("Görev-5__", fenomenSil(fenomenler, 0));
 
 /* Görev 6:
 Aşağıdakileri yapmak için fenomenEkle'i kullanın:
