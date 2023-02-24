@@ -189,10 +189,15 @@ Aşağıdakileri yapmak için profilListesi'ni kullanın:
 */
 
 function profilListesi(profiliAlinacakDizi) {
- 
+const profilDizisi = profiliAlinacakDizi;
+const kopyalananDizi = [...profilDizisi];
+for (let i=0; i<kopyalananDizi.length; i++) {
+  kopyalananDizi[i] = kopyalananDizi[i].profile
+}
+return kopyalananDizi
 }
 
-
+console.log(profilListesi(fenomenler));
 
 /* Görev 5:
 Aşağıdakileri yapmak için fenomenSil'i kullanın:
@@ -203,11 +208,14 @@ Aşağıdakileri yapmak için fenomenSil'i kullanın:
 5. Ortaya çıkan diziyi döndürün
 
 ÖRNEK: fenomenSil işlevi fenomenler dizisi ve 0 indeks sayısı ile çağrılırsa, veri kümemizden 'Instagram' kaldırılmış olarak döndürür. */
-function fenomenSil(/*kod*/) {
-  /*kod*/
+function fenomenSil(fenomenSilinecekDizi, silinecekIndex) {
+  let index1 = silinecekIndex;
+  const kopyaDizi = [...fenomenSilinecekDizi];
+  kopyaDizi.splice(index1,1)
+return kopyaDizi
 }
 
-
+console.log(fenomenSil(fenomenler, 0));
 
 /* Görev 6:
 Aşağıdakileri yapmak için fenomenEkle'i kullanın:
