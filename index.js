@@ -257,10 +257,17 @@ Aşağıdakileri yapmak için enFenomenler'yi kullanın:
 ÖRNEK: enFenomenler(fenomenler) çağrıldığında sonuç olarak ["Instagram", "Cristiano Ronaldo", ... "Khabane lame"] dönemelidir
 */
 
-function enFenomenler(/*kod*/) {
-  /*kod*/
+function enFenomenler(mevcutDizi1) {
+  let fenomenlerDizisi = [];
+  for ( let i = 0; i < mevcutDizi1.length; i++ ) {
+  if (mevcutDizi1[i].followers > 100000000 ) {
+  fenomenlerDizisi.push(mevcutDizi1[i].profile)
+    };
+  };
+  return fenomenlerDizisi
 }
 
+console.log("Görev-7__", enFenomenler(fenomenler));
 
 /* Görev 8:
 Aşağıdakileri yapmak için fenomenGonderimSayisi'nı kullanın:
@@ -271,11 +278,15 @@ Aşağıdakileri yapmak için fenomenGonderimSayisi'nı kullanın:
 ÖRNEK: fenomenGonderimSayisi(fenomenler, 'Will Smith') çağrıldığında "136" dönmelidir
 */
 
-function fenomenGonderimSayisi(/*kod*/){
-  /*kod*/
+function fenomenGonderimSayisi(mevcutDizi2, profilAdı1){
+  for (let i=0; i<mevcutDizi2.length; i++){
+if ( mevcutDizi2[i].profile === profilAdı1) {
+  return mevcutDizi2[i].posts
+};
+};
 }
 
-
+console.log("Görev-8__", fenomenGonderimSayisi(fenomenler, 'Will Smith'));
 
 /* Görev 9:
 Aşağıdakileri yapmak için platformaGoreCokGonderiYapanFenomen'ni kullanın:
@@ -288,8 +299,9 @@ Not: Gönderi sayısı belli olmayan (NA) hesaba katmayın.
 Örnek: platformaGoreCokGonderiYapanFenomen(fenomenler, 'TikTok') çağrıldığında "charli damelio" dönmelidir
 */
 
-function platformaGoreCokGonderiYapanFenomen(/*kod*/){
-  /*kod*/
+function platformaGoreCokGonderiYapanFenomen(mevcutDizi3, platformAdı1){
+ 
+
 }
 
 
