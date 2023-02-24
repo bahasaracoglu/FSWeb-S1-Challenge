@@ -300,11 +300,21 @@ Not: Gönderi sayısı belli olmayan (NA) hesaba katmayın.
 */
 
 function platformaGoreCokGonderiYapanFenomen(mevcutDizi3, platformAdı1){
- 
-
+  let platformDizisi = [];
+  for (let i=0; i<mevcutDizi3.length; i++) {
+    if (mevcutDizi3[i].platform === platformAdı1) {
+    platformDizisi.push(mevcutDizi3[i])}
+}
+const highest = platformDizisi.reduce((previous, current) => {
+  return current.posts > previous.posts ? current : previous;
+}
+);
+return highest.profile
 }
 
 
+
+console.log("Görev-9__", platformaGoreCokGonderiYapanFenomen(fenomenler, 'TikTok'));
 
 /* ***** GÖREVLERİN SONU ***** */
 
